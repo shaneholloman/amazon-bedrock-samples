@@ -1,0 +1,5 @@
+# Extra packages the driver notebook needs — the CDK app itself needs none of these.
+boto3>=1.43
+pandas
+pyyaml
+mcp-proxy-for-aws
