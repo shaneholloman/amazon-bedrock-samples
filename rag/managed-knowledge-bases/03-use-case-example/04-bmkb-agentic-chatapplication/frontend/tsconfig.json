@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["vite/client"],
+    "composite": false,
+    "noEmit": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo"
+  },
+  "references": [{ "path": "../lambda/common" }],
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}

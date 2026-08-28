@@ -1,0 +1,26 @@
+{
+  "name": "@bmkb/lambda-ingest-worker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SQS-driven ingest worker \u2014 batch <=10, token-bucket <=5 TPS, account concurrency gate <=10, inline tenant_id metadata, IngestKnowledgeBaseDocuments, DLQ on failure. Owned by ingest workstream.",
+  "license": "MIT-0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@bmkb/common": "*",
+    "@aws-sdk/client-bedrock-agent": "3.1072.0",
+    "@aws-sdk/client-s3": "3.1072.0",
+    "@aws-sdk/client-sqs": "3.1072.0",
+    "@aws-sdk/client-dynamodb": "3.1072.0",
+    "@aws-sdk/lib-dynamodb": "3.1072.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.162",
+    "@types/node": "20.19.43",
+    "typescript": "5.9.3"
+  }
+}

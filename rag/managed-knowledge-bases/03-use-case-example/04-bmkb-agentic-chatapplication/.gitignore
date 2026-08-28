@@ -1,0 +1,40 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+*.tsbuildinfo
+lib/**/*.js
+lib/**/*.d.ts
+
+# CDK
+cdk.out/
+cdk.context.json
+
+# env / secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# frontend build
+frontend/dist/
+
+# test / coverage
+coverage/
+.vitest/
+
+# benchmark generated artifacts
+benchmark/results/*.csv
+benchmark/results/*.json
+!benchmark/results/.gitkeep
+
+# benchmark dataset (large, re-downloadable — see README → Benchmarks for the kaggle command)
+benchmark/data/
+
+# OS / editor
+.DS_Store
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json

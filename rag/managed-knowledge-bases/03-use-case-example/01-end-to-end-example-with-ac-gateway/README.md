@@ -23,6 +23,7 @@ A complete production-ready pattern: Managed KB + AgentCore Gateway + Strands Ag
 |---|----------|-------------|
 | 02 | `../02-multi-kb-semantic-routing.ipynb` | Multi-KB routing via Gateway with transparent tool selection |
 | 03 | `../03-gateway-with-cedar-policies.ipynb` | Gateway + Cedar policies for multi-tenant access control |
+| 04 | `../04-bmkb-agentic-chatapplication/` | Deployable multi-tenant document chat app (CDK + React SPA) with per-user isolation |
 
 ## Documentation
 

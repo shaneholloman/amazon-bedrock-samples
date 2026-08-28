@@ -40,6 +40,7 @@ End-to-end patterns that combine multiple capabilities:
 - [01-end-to-end-example-with-ac-gateway/](03-use-case-example/01-end-to-end-example-with-ac-gateway/) — KB + AgentCore Gateway + Strands Agent + full-stack observability
 - [02-multi-kb-semantic-routing.ipynb](03-use-case-example/02-multi-kb-semantic-routing.ipynb) — Multi-KB routing via Gateway with transparent tool selection
 - [03-gateway-with-cedar-policies.ipynb](03-use-case-example/03-gateway-with-cedar-policies.ipynb) — Gateway + Cedar for multi-tenant access control
+- [04-bmkb-agentic-chatapplication/](03-use-case-example/04-bmkb-agentic-chatapplication/) — Deployable multi-tenant document chat app (CDK + React SPA) with per-user isolation via metadata filtering
 
 ### 🔐 [04-security-and-access-controls/](04-security-and-access-controls/)
 

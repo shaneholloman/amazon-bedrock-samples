@@ -1,0 +1,22 @@
+{
+  "name": "@bmkb/lambda-chat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "POST /chat — Agentic Retrieval (AgenticRetrieveStream) with EXPLICIT tenant equals filter, streaming. Owned by chat workstream.",
+  "license": "MIT-0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-agent-runtime": "3.1072.0",
+    "@bmkb/common": "*"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.162",
+    "@types/node": "20.19.43",
+    "typescript": "5.9.3"
+  }
+}

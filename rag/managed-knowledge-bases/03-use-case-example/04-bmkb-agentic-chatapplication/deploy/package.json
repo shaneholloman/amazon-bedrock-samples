@@ -1,0 +1,29 @@
+{
+  "name": "@bmkb/infra",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CDK v2 app — TRUE Managed Bedrock KB (type=MANAGED, Bedrock-managed vector store) + CUSTOM-connector data source via a Lambda-backed custom resource, S3, API GW, Lambdas, SQS+DLQ, DynamoDB, least-priv IAM. See README.",
+  "license": "MIT-0",
+  "bin": {
+    "bmkb": "dist/bin/app.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "build:frontend": "npm --prefix ../frontend run build",
+    "synth": "npm run build:frontend && tsc -b && cdk synth",
+    "deploy": "npm run build:frontend && tsc -b && cdk deploy --require-approval never",
+    "destroy": "cdk destroy --force",
+    "diff": "npm run build:frontend && tsc -b && cdk diff"
+  },
+  "dependencies": {
+    "@bmkb/common": "*",
+    "aws-cdk-lib": "^2.262.1",
+    "constructs": "10.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.43",
+    "aws-cdk": "2.1128.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "dist",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    "tsBuildInfoFile": "dist/.tsbuildinfo"
+  },
+  "references": [{ "path": "../lambda/common" }],
+  "include": ["bin/**/*.ts", "lib/**/*.ts"],
+  "exclude": ["cdk.out", "dist", "node_modules"]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@bmkb/frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "React 18 + Vite + TS + Tailwind UI — Cognito sign-in, drag-drop multi-file upload, live status badges, streaming per-user chat. Owned by frontend workstream.",
+  "license": "MIT-0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@bmkb/common": "*",
+    "@tailwindcss/typography": "^0.5.20",
+    "oidc-client-ts": "3.5.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-markdown": "^10.1.0",
+    "zustand": "4.5.7"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-react": "5.2.0",
+    "autoprefixer": "10.5.0",
+    "postcss": "8.5.15",
+    "tailwindcss": "3.4.19",
+    "typescript": "5.9.3",
+    "vite": "6.4.3"
+  }
+}

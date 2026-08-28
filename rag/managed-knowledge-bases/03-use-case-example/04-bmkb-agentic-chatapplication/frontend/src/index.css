@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  :root.dark {
+    color-scheme: dark;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+  }
+
+  /* Consistent, visible focus ring for keyboard users across the app. */
+  :where(a, button, input, textarea, [tabindex]):focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-950;
+  }
+}
+
+@layer components {
+  .bmkb-card {
+    @apply rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900;
+  }
+
+  .bmkb-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .bmkb-btn-primary {
+    @apply bmkb-btn bg-brand-600 text-white hover:bg-brand-500 active:bg-brand-700;
+  }
+
+  .bmkb-btn-ghost {
+    @apply bmkb-btn border border-slate-200 bg-transparent text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800;
+  }
+
+  .bmkb-input {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder:text-slate-500;
+  }
+}
+
+/* Thin, theme-aware scrollbars for the chat + document panes. */
+.bmkb-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(148 163 184 / 0.5) transparent;
+}
+.bmkb-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.bmkb-scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(148 163 184 / 0.5);
+  border-radius: 9999px;
+}

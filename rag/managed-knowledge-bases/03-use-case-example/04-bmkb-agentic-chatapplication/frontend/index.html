@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="bmkb — upload documents and chat over them with a tenant-scoped Bedrock Knowledge Base."
+    />
+    <title>BMKB - Document Chat App</title>
+    <script>
+      // Apply the persisted theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var stored = localStorage.getItem('bmkb.theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var dark = stored ? stored === 'dark' : prefersDark;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (_) {
+          /* ignore storage errors */
+        }
+      })();
+    </script>
+  </head>
+  <body class="h-full">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
