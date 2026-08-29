@@ -1,0 +1,6 @@
+cdk.out/
+.cdk.staging/
+__pycache__/
+*.pyc
+.venv/
+node_modules/
